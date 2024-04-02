@@ -18,7 +18,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 public:
-	afx_msg LONG OnInitDialog(UINT wParam, LONG lParam);
+	afx_msg LRESULT OnInitDialog(WPARAM wParam, LPARAM lParam);
 	afx_msg void OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar);
 };
 

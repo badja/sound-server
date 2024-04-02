@@ -27,7 +27,7 @@ END_MESSAGE_MAP()
 
 // CVolumeBar message handlers
 
-LONG CVolumeBar::OnInitDialog(UINT wParam, LONG lParam)
+LRESULT CVolumeBar::OnInitDialog(WPARAM wParam, LPARAM lParam)
 {
 	BOOL bRet = (BOOL)HandleInitDialog(wParam, lParam);
 
