@@ -1,0 +1,622 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SoundServer.ico"
+IDR_SoundServerTYPE     ICON                    "res\\SoundServerDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_VIEW_LARGEICON
+    BUTTON      ID_VIEW_SMALLICON
+    BUTTON      ID_VIEW_LIST
+    BUTTON      ID_VIEW_DETAILS
+    SEPARATOR
+    BUTTON      ID_PLAY_GROUP
+    BUTTON      ID_PLAY_SOUND
+    BUTTON      ID_PLAY_STOP
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Connection"
+    BEGIN
+        MENUITEM "&Connect",                    ID_CONNECT
+        MENUITEM "&Disconnect",                 ID_DISCONNECT
+        MENUITEM "C&onfiguration...",           ID_CONFIGURE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Set &Master Sound Folder...", ID_SET_MASTERFOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "Add &Group...",               ID_ADD_GROUP
+        MENUITEM "Add Group from &Folder...",   ID_ADD_GROUPFROMFOLDER
+        MENUITEM "Add Groups from Su&bfolders...", 
+                                                ID_ADD_GROUPSFROMSUBFOLDERS
+        MENUITEM "Edit G&roup...",              ID_EDIT_GROUP
+        MENUITEM "Delete Gro&ups",              ID_DELETE_GROUP
+        MENUITEM SEPARATOR
+        MENUITEM "Add &Sound...",               ID_ADD_SOUND
+        MENUITEM "Add Sounds from F&iles...",   ID_ADD_SOUNDSFROMFILES
+        MENUITEM "Edit S&ound...",              ID_EDIT_SOUND
+        MENUITEM "Delete Sou&nds",              ID_DELETE_SOUND
+    END
+    POPUP "&Sound"
+    BEGIN
+        MENUITEM "Play &Group",                 ID_PLAY_GROUP
+        MENUITEM "Play &Sound",                 ID_PLAY_SOUND
+        MENUITEM "St&op Playing",               ID_PLAY_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "&Add to Favorites",           ID_ADD_FAVORITES
+        MENUITEM "&Delete from Favorites",      ID_DELETE_FAVORITES
+        MENUITEM SEPARATOR
+        MENUITEM "Add S&peech...",              ID_ADD_SPEECH
+        MENUITEM "Edit Spee&ch...",             ID_EDIT_SPEECH
+        MENUITEM "D&elete Speech",              ID_DELETE_SPEECH
+        MENUITEM "&Test Speech",                ID_TEST_SPEECH
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Sound Server/Client...", ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_RENAME,              VIRTKEY, NOINVERT
+    VK_DELETE,      ID_DELETE,              VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About Sound Server/Client"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Sound Server/Client",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Adrian Grucza"
+            VALUE "FileDescription", "Sound Server/Client"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "SoundServer.exe"
+            VALUE "LegalCopyright", "(c) Adrian Grucza.  All rights reserved."
+            VALUE "OriginalFilename", "SoundServer.exe"
+            VALUE "ProductName", "Sound Server/Client"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "SoundServer\n\nSoundServer\n\n\nSoundServer.Document\nSoundServer.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "SoundServer"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+    ID_VIEW_AUTOARRANGE     "Arrange icons on a grid."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_SMALLICON       "Display items by using small icons.\nSmall Icons"
+    ID_VIEW_LARGEICON       "Display items by using large icons.\nLarge Icons"
+    ID_VIEW_LIST            "Displays items in a list.\nList"
+    ID_VIEW_DETAILS         "Displays detailed information about each item in the window.\nDetails"
+    ID_VIEW_LINEUP          "Arranges icons in a grid."
+    ID_VIEW_BYNAME          "Sorts the icons alphabetically."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ADD_GROUP            "Add a new sound group\nAdd Group"
+    ID_DELETE_GROUP         "Delete the selected sound group(s)\n\\Delete Group"
+    ID_ADD_SOUND            "Add a new sound to the selected group\nAdd Sound"
+    ID_DELETE_SOUND         "Delete the selected sound(s)\nDelete Sound"
+    ID_EDIT_SOUND           "Edit the selected sound\nEdit Sound"
+    ID_EDIT_GROUP           "Edit the selected sound group\nEdit Group"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONNECT              "Connect to the Sound Server\nConnect"
+    ID_CONFIGURE            "Edit the connection configuration\nConfiguration"
+    ID_DISCONNECT           "Disconnect from the Sound Server\nDisconnect"
+    ID_PLAY_GROUP           "Play a random sound from the selected group\nPlay Group"
+    ID_PLAY_SOUND           "Play the selected sound\nPlay Sound"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ADD_GROUPFROMFOLDER  "Add a new sound group with sounds from a particular folder\nAdd Group from Folder"
+    ID_ADD_GROUPSFROMSUBFOLDERS 
+                            "Add new sound groups with sounds from each subfoler beneath a particular folder\nAdd Groups from Subfolders"
+    ID_ADD_SOUNDSFROMFILES  "Add new sounds from particular files to the selected group\nAdd Sounds from Files"
+    ID_ADD_FAVORITES        "Add the selected sound(s) to the Favorites group\nAdd to Favorites"
+    ID_DELETE_FAVORITES     "Delete the selected sound(s) from the Favorites group\nDelete from Favorites"
+    ID_PLAY_STOP            "Stop playing sounds\nStop Playing"
+    ID_SET_MASTERFOLDER     "Set the master sound folder\nSet Master Sound Folder"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ADD_SPEECH           "Add a text-to-speech sound to the Speech group\nAdd Speech"
+    ID_DELETE_SPEECH        "Delete the selected text-to-speech sound(s) from the Speech group\nDelete Speech"
+    ID_EDIT_SPEECH          "Edit the selected text-to-speech sound\nEdit Speech"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_CONTEXT MENU 
+BEGIN
+    POPUP "Left Pane (Server)"
+    BEGIN
+        MENUITEM "&Play Group",                 32794
+        MENUITEM SEPARATOR
+        MENUITEM "Add &Group...",               32775
+        MENUITEM "Add Group from &Folder...",   32800
+        MENUITEM "Add Groups from Su&bfolders...", 32801
+        MENUITEM "Edit G&roup...",              32782
+        MENUITEM "Delete Gro&ups",              32776
+    END
+    POPUP "Left Pane (Client)"
+    BEGIN
+        MENUITEM "&Play Group",                 32794
+    END
+    POPUP "Right Pane (Server)"
+    BEGIN
+        MENUITEM "Play &Sound",                 32795
+        MENUITEM "St&op Playing",               32807
+        MENUITEM SEPARATOR
+        MENUITEM "Add to &Favorites",           32804
+        MENUITEM "&Delete from Favorites",      32805
+        MENUITEM SEPARATOR
+        MENUITEM "Add S&peech...",              32816
+        MENUITEM "Edit Spee&ch...",             32819
+        MENUITEM "De&lete Speech",              32817
+        MENUITEM SEPARATOR
+        MENUITEM "&Add Sound...",               32777
+        MENUITEM "Add Sounds from F&iles...",   32802
+        MENUITEM "&Edit Sound...",              32781
+        MENUITEM "Delete Sou&nds",              32778
+    END
+    POPUP "Right Pane (Client)"
+    BEGIN
+        MENUITEM "Play &Sound",                 32795
+        MENUITEM "St&op Playing",               32807
+        MENUITEM SEPARATOR
+        MENUITEM "Add to &Favorites",           32804
+        MENUITEM "&Delete from Favorites",      32805
+        MENUITEM SEPARATOR
+        MENUITEM "Add S&peech...",              32816
+        MENUITEM "Edit Spee&ch...",             32819
+        MENUITEM "De&lete Speech",              32817
+        MENUITEM "&Test Speech",                32820
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GROUP DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Group"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Name:",IDC_STATIC,7,7,22,8
+    EDITTEXT        IDC_NAME,7,17,110,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,129,26,50,16
+END
+
+IDD_SOUND DIALOGEX 0, 0, 296, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sound"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Name:",IDC_STATIC,7,7,22,8
+    EDITTEXT        IDC_NAME,7,17,110,12,ES_AUTOHSCROLL
+    LTEXT           "&File name:",IDC_STATIC,7,37,33,8
+    EDITTEXT        IDC_FILE,7,48,220,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,239,7,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,239,26,50,16
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,239,47,50,14
+END
+
+IDD_CONFIGURATION DIALOGEX 0, 0, 186, 105
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configuration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Server &Port:",IDC_STATIC,7,7,38,8
+    EDITTEXT        IDC_SVR_PORT,7,17,40,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SVR_PORTINC,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,47,17,10,
+                    12
+    LTEXT           "Server &Address:",IDC_STATIC,7,35,51,8
+    EDITTEXT        IDC_SERVER,7,45,100,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Delete Missing Sounds",IDC_DELETE_MISSINGSOUNDS,7,63,
+                    80,16
+    PUSHBUTTON      "&Refresh Sounds",IDC_REFRESH_MASTERFOLDER,7,81,80,16
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,129,26,50,16
+    GROUPBOX        "&Socket Type",IDC_STATIC,79,73,100,25,NOT WS_VISIBLE
+    CONTROL         "&TCP",IDC_TCP,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE | WS_GROUP,89,84,30,10
+    CONTROL         "&UDP",IDC_UDP,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE,129,84,31,10
+END
+
+IDR_MAINFRAME DIALOGEX 0, 0, 124, 16
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Volume",IDC_STATIC,0,3,24,8
+    CONTROL         "",IDC_VOLUME,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,24,0,100,15
+END
+
+IDD_SPEECH DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Speech"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "T&ext:",IDC_STATIC,7,7,17,8
+    EDITTEXT        IDC_TEXT,7,18,110,70,ES_MULTILINE
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,16
+    PUSHBUTTON      "&Test",IDC_TEST,129,26,50,16
+    PUSHBUTTON      "&Stop",IDC_STOP,129,45,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,129,64,50,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_GROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_SOUND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_CONFIGURATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_SPEECH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\SoundServer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\SoundServer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
