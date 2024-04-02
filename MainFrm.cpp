@@ -157,7 +157,7 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT /*lpcs*/,
 	if (!theApp.IsServer())
 		GetMenu()->DeleteMenu(1, MF_BYPOSITION);	// delete the Edit menu
 
-	RegisterHotKey(GetSafeHwnd(), 0, MOD_WIN, 'S');
+	RegisterHotKey(GetSafeHwnd(), 0, MOD_SHIFT | MOD_WIN, 'B');
 
 	return TRUE;
 }
